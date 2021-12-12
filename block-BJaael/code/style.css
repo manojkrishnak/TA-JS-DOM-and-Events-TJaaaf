@@ -33,3 +33,30 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/* custom styles */
+
+.container{
+  padding: 0 0.1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.heading{
+  text-align: center;
+}
+
+.grid{
+  padding-top: 2rem;
+}
+
+.box{
+  display: inline-block;
+  border: 1.2px solid black;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  cursor: pointer;
+}
