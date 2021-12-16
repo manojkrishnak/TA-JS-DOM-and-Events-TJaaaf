@@ -5,13 +5,13 @@ let userInfo = {};
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
-    userInfo.name = form.elements.name.value;
-    userInfo.email = form.elements.email[0].value;
-    userInfo.gender = form.elements.gender.value;
-    userInfo.color = form.elements.email[1].value;
-    userInfo.rating = form.elements.email[2].value;
-    userInfo.genre = form.elements.drone.value;
-    userInfo.agreeTerms = form.elements.terms.checked;
+    userInfo.name = e.target.elements.name.value;
+    userInfo.email = e.target.elements.email[0].value;
+    userInfo.gender = e.target.elements.gender.value;
+    userInfo.color = e.target.elements.email[1].value;
+    userInfo.rating = e.target.elements.email[2].value;
+    userInfo.genre = e.target.elements.drone.value;
+    userInfo.agreeTerms = e.target.elements.terms.checked;
 
     modal.style.display= "inline-block";
 
