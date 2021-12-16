@@ -91,3 +91,35 @@ input[type='text'] {
 .terms {
   display: inline-block;
 }
+
+.greeting{
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.modal-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  color: #000000;
+}
+
+.modal{
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.close{
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.btn{
+  color: rgb(185, 103, 20);
+  text-decoration: none;
+}
