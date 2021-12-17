@@ -35,3 +35,54 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+
+/* custom styles */
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1{
+  text-align: center;
+}
+
+.form-container{
+  width: 30%;
+  background-color:aqua;
+  margin-top: 6rem;
+}
+.form-control{
+  margin-bottom: 1.3rem;
+}
+
+label{
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: gray;
+}
+form{
+  padding: 1rem;
+}
+input{
+  padding: 0.2rem;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid black;
+}
+
+button{
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+small{
+  color: red;
+}
+
+.error{
+  border: 2px solid red;
+}
