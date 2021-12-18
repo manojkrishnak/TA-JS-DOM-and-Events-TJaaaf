@@ -18,21 +18,19 @@ function validateEmail(email) {
   return re.test(String(email).toLowerCase());
 }
 
-function isAValidPhoneNumber(number){
-    console.log(number)
-    return number.split("").every(v => Number(v));
+function isAValidPhoneNumber(number) {
+  return isNaN(number);
 }
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  // console.log(e.target.elements.name.value)
   let elm = e.target.elements;
   let uname = elm.uname;
   let name = elm.name;
   let email = elm.email;
   let number = elm.number;
-  let password = elm.password;
-  let cnfPassword = elm.cnfPassword;
+  let password = elm.pwd;
+  let cnfPassword = elm.cnfPwd;
 
   let errorMessage = "";
 
@@ -50,23 +48,48 @@ Password and confirm password must be same.
     errorMessage = minCharsError("username", 4);
     uname.nextElementSibling.innerText = errorMessage;
     uname.classList.add("error");
-  } else if (nameHasNoNumbers(name.value)) {
+  } else {
+    uname.nextElementSibling.innerText = "";
+    uname.classList.remove("error");
+  }
+
+  if (nameHasNoNumbers(name.value)) {
     errorMessage = "You can't use number in the name field";
     name.nextElementSibling.innerText = errorMessage;
     name.classList.add("error");
-  } else if(validateEmail(email.value) && (elmCharsLength(email.value) < 6)){
+  } else {
+    errorMessage = "";
+    name.nextElementSibling.innerText = errorMessage;
+    name.classList.remove("error");
+  }
+
+  if (!(validateEmail(email.value) && elmCharsLength(email.value) > 6)) {
     errorMessage = "Not a valid email";
     email.nextElementSibling.innerText = errorMessage;
     email.classList.add("error");
-  }else if((elmCharsLength(number.value) < 7) && !isAValidPhoneNumber(number.value)){
+  } else {
+    errorMessage = "";
+    email.nextElementSibling.innerText = errorMessage;
+    email.classList.remove("error");
+  }
+
+  if (!(elmCharsLength(number.value) >= 7 && !isAValidPhoneNumber(number.value))) {
     errorMessage = "Not a valid phone number";
     number.nextElementSibling.innerText = errorMessage;
     number.classList.add("error");
-  }else if(password.value !== cnfPassword.value){
+  } else {
+    errorMessage = "";
+    number.nextElementSibling.innerText = errorMessage;
+    number.classList.remove("error");
+  }
+
+  if (password.value !== cnfPassword.value) {
     errorMessage = "Password and confirm password are not same";
     password.nextElementSibling.innerText = errorMessage;
     password.classList.add("error");
-  }else{
-
+  } else {
+    errorMessage = "";
+    password.nextElementSibling.innerText = errorMessage;
+    password.classList.remove("error");
   }
 });
