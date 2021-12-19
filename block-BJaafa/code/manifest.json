@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Zen mode on Youtube",
+    "version": "1.0.0",
+    "description": "This extension is used to create Zen mode while watching videos on YouTube",
+    "action": {
+        
+        "default_title": "Zen mode on YT",
+        "default_popup": "index.html"
+      },
+      "icons":{
+        "16": "./assets/ban-logo-16.png",
+        "48": "./assets/ban-logo-48.png",   
+        "128": "./assets/ban-logo-128.png"
+      },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+      {
+     "matches": ["*://*.youtube.com/*"],
+     "js": ["content.js"]
+    }
+  ]
+}
