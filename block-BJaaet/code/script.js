@@ -9,29 +9,37 @@ elm.addEventListener("submit", function (e) {
   movies.innerHTML = movieNames
     .map(
       (el, i) =>
-        "<li class=li"+i+"><input type='checkbox'>" +
+        "<li class=li" +
+        i +
+        "><input type='checkbox'>" +
         el +
         " <i class='fas fa-times'></i></li>"
     )
     .join("");
-    let textBox = document.querySelector(".watchMovie");
-    textBox.value = "";
+  let textBox = document.querySelector(".watchMovie");
+  textBox.value = "";
   let del = document.querySelectorAll(".fa-times");
   del.forEach(function (eachDel) {
     eachDel.addEventListener("click", function (e) {
-        console.log(e)
-    //   console.log(e.target.parentElement.innerText);
-   let index = movieNames.findIndex(function (el){ console.log( el.toString() == e.target.parentElement.innerText.toString())
-    return el === e.target.parentElement.innerText})
-   console.log(index)
-    //   movieNames.splice(movieNames.indexOf(e.target.parentElement.innerText), 1);
-    //   console.log(movieNames)
-
+      let index = movieNames.findIndex(function (el) {
+        return el.trim() === e.target.parentElement.innerText.trim();
+      });
+      movieNames.splice(index, 1);
+      movies.innerHTML = movieNames
+        .map(
+          (el, i) =>
+            "<li class=li" +
+            i +
+            "><input type='checkbox'>" +
+            el +
+            " <i class='fas fa-times'></i></li>"
+        )
+        .join("");
     });
   });
 });
 
 movies.innerHTML =
   movieNames.length < 1
-    ? "<li class='no-movies'>No movies to watch</li>"
+    ? "<li class='no-movies'>No movie to watch</li>"
     : false;

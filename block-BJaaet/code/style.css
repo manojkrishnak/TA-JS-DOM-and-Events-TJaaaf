@@ -107,3 +107,9 @@ li{
     font-weight: 700;
     border-bottom: 0px ;
 }
+
+.cross{
+    margin-left: 1rem;
+    color: rgb(185, 43, 43);
+    font-weight: 700;
+}
