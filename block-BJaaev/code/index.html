@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TODO Application</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="./script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <title>TODO Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="app">
+      <div class="container">
+        <h1>todos</h1>
+        <input type="text" class="todo-item" placeholder="what needs to done?">
+        <ul class="todos"></ul>
+        <div>
+          <li class="row">
+            <span>0 items left</span>
+            <div class="row">
+              <button>All</button>
+              <button>Active</button>
+              <button>Completed</button>
+            </div>
+            <button>clear completed</button>
+          </li>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>
