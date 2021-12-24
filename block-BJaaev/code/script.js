@@ -56,6 +56,7 @@ function filterResults(event) {
       btn.setAttribute("id", "selected");
     }
   });
+
   if (selectionCategory === "all") {
     createUI(allTodos);
   } else if (selectionCategory === "active") {
@@ -119,8 +120,6 @@ function createUI(todos) {
     span.classList.add("span");
     let i = document.createElement("i");
     i.classList.add("fas", "fa-times", "icon");
-    // i.style.display = "none";
-    // span.append(i);
 
     checkbox.addEventListener("change", toggleCompleted);
     i.addEventListener("click", deleteTodo);
