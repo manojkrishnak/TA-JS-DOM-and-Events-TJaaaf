@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="./script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/65f4240069.js" crossorigin="anonymous"></script>
+  <title>TODO Application</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="app">
+      <div class="container">
+        <h1>todos</h1>
+        <div class="app-main">
+          <input type="text" class="todo-item" placeholder="what needs to done?">
+        <ul class="todos"></ul>
+        <div>
+          <div class="footer row flex align-ct ">
+            <div><span class="items-count">0</span> items left</div>
+            <div class="row">
+              <button class="all" data-id="0">All</button>
+              <button class="active" data-id="1">Active</button>
+              <button class="completed" data-id="2">Completed</button>
+            </div>
+            <a href="#" class="clear-completed">Clear completed</a>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+
 </html>
