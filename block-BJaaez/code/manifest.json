@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "To-do",
+    "version": "1.0.0",
+    "description": "This extension is used to create To-do's",
+    "action": {
+        
+        "default_title": "To-do",
+        "default_popup": "index.html"
+      },
+      "icons":{
+        "16": "./assets/list-alt-regular-16.png",
+        "48": "./assets/list-alt-regular-48.png",   
+        "128": "./assets/list-alt-regular-128.png"
+      },
+    "permissions": [
+        "tabs"
+    ]
+}
