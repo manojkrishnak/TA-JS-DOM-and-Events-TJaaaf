@@ -125,6 +125,7 @@ function createUI(todos) {
     let span = document.createElement("span");
     span.classList.add("span");
     let i = document.createElement("i");
+    i.innerHTML = "X";
     i.classList.add("fas", "fa-times", "icon");
 
     checkbox.addEventListener("change", toggleCompleted);
