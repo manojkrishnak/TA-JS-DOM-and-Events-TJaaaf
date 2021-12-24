@@ -254,6 +254,10 @@ li:hover > .icon{
    color: red;
 }
  
+.icon{
+    width: 15px;
+    height: 15px;
+}
 
 .row a{
   color: #767776;

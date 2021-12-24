@@ -124,16 +124,19 @@ function createUI(todos) {
 
     let span = document.createElement("span");
     span.classList.add("span");
-    let i = document.createElement("i");
-    i.innerHTML = "X";
-    i.classList.add("fas", "fa-times", "icon");
+    // let i = document.createElement("i");
+    // i.innerHTML = "X";
+    // i.classList.add("fas", "fa-times", "icon");
+    let img = document.createElement("img");
+    img.src="./assets/times-solid.svg";
+    img.classList.add("icon");
 
     checkbox.addEventListener("change", toggleCompleted);
-    i.addEventListener("click", deleteTodo);
+    img.addEventListener("click", deleteTodo);
     [...btns].forEach((btn) => btn.addEventListener("click", filterResults));
     clearCompletedBtn.addEventListener("click", clearCompletedTodos);
 
-    li.append(dummyDiv, i);
+    li.append(dummyDiv, img); 
     ul.append(li);
     itemsRemainingCount();
   });
